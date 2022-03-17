@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  vars:
+    sn_host: "{{lookup('env','SN_HOST')}}"
+    sn_username: "{{lookup('env',' SN_USERNAME')}}"
+    sn_password: "{{lookup('env',' SN_PASSWORD')}}"
+  gather_facts: no
+  tasks:
+    - debug:
+        msg: 
+         - "{{sn_host}}"
+         - "{{sn_username}}"
+         - "{{sn_password}}"
+         
