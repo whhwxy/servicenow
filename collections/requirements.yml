@@ -1,4 +1,2 @@
 collections:
-  - name: https://github.com/ServiceNowITOM/servicenow-ansible.git
-    type: git
-    version: devel
+  - name: servicenow.itsm
