@@ -1,17 +1,10 @@
 plugin: servicenow.servicenow.now
-vars:
-  sn_instance: "{{lookup('env','SN_HOST')}}"
-  sn_username: "{{lookup('env','SN_USERNAME')}}"
-  sn_password: "{{lookup('env','SN_PASSWORD')}}"
-host: "{{sn_instance}}"
-username: "{{sn_username}}"
-password: "{{sn_password}}"
 table: cmdb_ci_linux_server
 fields: [ip_address,fqdn,host_name,sys_class_name,name,os]
 keyed_groups:
-- key: sn_sys_class_name | lower
-  prefix: ''
-  separator: ''
-- key: sn_os | lower
-  prefix: ''
-  separator: ''
+  - key: sn_sys_class_name | lower
+	  prefix: ''
+	  separator: ''
+  - key: sn_os | lower
+	  prefix: ''
+	  separator: ''
