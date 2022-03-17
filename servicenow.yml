@@ -1,4 +1,4 @@
-plugin: servicenow.servicenow
+plugin: servicenow.servicenow.now
 vars:
   sn_instance: "{{lookup('env','SN_HOST')}}"
   sn_username: "{{lookup('env','SN_USERNAME')}}"
