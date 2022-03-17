@@ -1,4 +1,4 @@
-plugin: servicenow.servicenow.now
+plugin: servicenow.servicenow
 host: aiatest.service-now.com
 username: admin
 password: password
