@@ -1,4 +1,5 @@
 ---
 collections:
-- name: servicenow.servicenow
-  source: https://galaxy.ansible.com
+  - name: https://github.com/ServiceNowITOM/servicenow-ansible.git
+    type: git
+    version: devel
