@@ -1,5 +1,5 @@
 plugin: servicenow.servicenow.now
-host: servicenow.mydomain.com
+host: aiatest.service-now.com
 username: admin
 password: password
 table: cmdb_ci_linux_server
