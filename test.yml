@@ -1,14 +1,20 @@
 ---
 - hosts: localhost
-  vars:
-    sn_host: "{{lookup('env','SN_HOST')}}"
-    sn_username: "{{lookup('env',' SN_USERNAME')}}"
-    sn_password: "{{lookup('env',' SN_PASSWORD')}}"
-  gather_facts: no
+  connection: local
+  gather_facts: false
   tasks:
-    - debug:
-        msg: 
-         - "{{sn_host}}"
-         - "{{sn_username}}"
-         - "{{sn_password}}"
-         
+    - name: create attachment
+      file:
+        path: /tmp/SNOW_test
+        state: touch
+        mode: '0755'
+    - name: add content
+      shell: echo 'SNOW test' >/tmp/SNOW_test
+    - name: Update the existing incident to add attachments
+      snow_record:
+        username: "Fu.Hua.Xu@kyndryl.com"
+        password: "MyPassword"
+        instance: "aiaprod"
+        state: present
+        number: "INC3259413"
+        attachment: "/tmp/SNOW_test"
