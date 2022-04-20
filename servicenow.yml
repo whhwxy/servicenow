@@ -1,0 +1,14 @@
+plugin: servicenow.servicenow.now
+host: test.servicenow.com
+username: Fu.Hua.Xu
+password: passwd
+table: cmdb_ci_linux_server
+fields: [ip_address,fqdn,hostname]
+keyed_groups:
+  - key: sn_sys_class_name | lower
+    prefix: ''
+    separator: ''
+  - key: sn_os | lower
+    prefix: ''
+    separator: ''
+~                     
