@@ -10,5 +10,4 @@ keyed_groups:
     separator: ''
   - key: sn_os | lower
     prefix: ''
-    separator: ''
-~                     
+    separator: ''                
